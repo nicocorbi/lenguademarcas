@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1337</title>
+</head>
+<body> 
+    <p id="marcadorPuntos">0</p>
+   <button id="botonSumar">Click</button>
+
+   <script>
+        let puntos = 0
+        let marcadorPuntos = document.getElementById("marcadorPuntos");
+        marcadorPuntos.innerText = puntos
+        const botonSumar = document.querySelector("#botonSumar"); 
+        botonSumar.addEventListener("click", sumarPuntos)
+
+        function sumarPuntos(){
+            puntos++
+            marcadorPuntos.innerText = puntos
+
+            console.log(puntos)
+        }
+           
+   </script>
+</body>
+</html>

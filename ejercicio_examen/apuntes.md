@@ -1,0 +1,1 @@
+hacer un juego que al darle click un boton la puntuacion aumenta
