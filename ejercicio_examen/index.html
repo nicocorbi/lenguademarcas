@@ -15,10 +15,10 @@
         #marcadorPuntos{
             background:  blue;
             color : white;
-        }
+        } 
         button{
              background:yellow;
-             color: lightseagreen;
+             color: black;
         }
 
         
@@ -30,7 +30,11 @@
    <button id="botonSumar">Click</button>
 
    <script>
-        let puntos = 0
+        let puntos = localStorage.getItem('puntos');
+        if(puntos === null){
+            puntos = 0;
+        }
+        
         let marcadorPuntos = document.getElementById("marcadorPuntos");
         marcadorPuntos.innerText = puntos
         const botonSumar = document.querySelector("#botonSumar"); 
@@ -38,6 +42,7 @@
 
         function sumarPuntos(){
             puntos++
+            localStorage.setItem('puntos', puntos);
             marcadorPuntos.innerText = puntos
 
             console.log(puntos)
